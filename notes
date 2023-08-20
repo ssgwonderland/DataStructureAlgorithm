@@ -1,0 +1,15 @@
+            时间复杂度   空间复杂度   稳定性
+merge sort  N*logN      N           有
+quick sort  N*logN      logN        无
+heap sort   N*logN      O(1)        无
+
+贪图稳定性，选merge sort
+贪图额外空间极度优秀，选heap sort
+拼绝对运行时间，虽然时间复杂度一样，但是快排的常数时间最少，选quick sort
+
+链表常用的数据结构和技巧：
+1）使用容器（哈希表，数组）：笔试用
+2）快慢指针（省空间，选指针）：面试用
+
+容器怎么用？
+如果需要从后往前的，考虑用stack（先进后出）
