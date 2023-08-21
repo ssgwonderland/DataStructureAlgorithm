@@ -336,6 +336,8 @@ public class BinaryTree {
     }
 
     //反序列化：问题是，要把头节点保存了;用一个辅助queue来保存每次levelList弹出的node。虽然写出来了，但连蒙带猜，得重写几遍
+    //其实很简单的，因为你序列化的时候，左右孩子不为空，就既加序列化队列又加节点队列；左右孩子为空，只加序列化队列。
+    //所以反序列化时，反正左右孩子肯定是要先建出来的（这里你的思路没问题），你困惑的是什么时候加节点队列，这个和序列化的时候一样：左右孩子不为空才能加节点序列
     public Node buildByLevelQueue(Queue<String> levelList) {
         if(levelList == null || levelList.isEmpty()){
             return null;
