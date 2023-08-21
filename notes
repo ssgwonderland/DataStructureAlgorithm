@@ -13,3 +13,14 @@ heap sort   N*logN      O(1)        无
 
 容器怎么用？
 如果需要从后往前的，考虑用stack（先进后出）
+先进先出的，考虑用queue; 但是queue是一个抽象类，你new的时候，得给一个具体类，比如Queue<Node> queue = new LinkedList();
+
+
+//map遍历的写法
+for(HashMap.Entry<Node, Integer> entry: map.entrySet()){
+    String key = entry.getKey();
+    String value = entry.getValue();
+    System.out.println("Key=" + key + ", Value=" + value);
+}
+
+递归序要注意不要忽略null的时候，参考BinaryTree的代码
